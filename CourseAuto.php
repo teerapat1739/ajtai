@@ -3,7 +3,7 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
+<html lang="en">hgfkuydol6ueplkjmpo-=i7uhb9
 <!--<![endif]-->
 <head>
    
@@ -11,7 +11,7 @@
     <?php
         include('include/head-tag.php');
     ?>
-   </head>
+   </head>mnfsnd okvmdokjn mberi pouhb;oijfdnfxst oiuynfdh8rhgiujfdxhbikgj nsa9iebrnfers btpoi hgfdpiuyonhes;okdgjnhgd lik ed hgfj
     <body>
          <!--START HOME SECTION-->
         <div id="home-sec">
