@@ -37,21 +37,17 @@
     <a href="http://www.tep2.engr.tu.ac.th/auto-tu_db_joomla/images/file/auto-tu_curriculum.pdf" target="_blank">คลิ๊กที่นี่เพื่อดาวโหลดร่างหลักสูตร</a>
 </div>
 
-       <?php
+        <!--START FOOTER-->
+         <div class="col-md-12 footer">
+        <?php
             include('include/FOOTER.php');
         ?>
+        </div>
         <!--END FOOTER-->
 
-    <!-- CORE JQUERY  -->
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP CORE SCRIPT   -->
-    <script src="assets/plugins/bootstrap.min.js"></script>  
-     <!-- ISOTOPE SCRIPT   -->
-    <script src="assets/plugins/jquery.isotope.min.js"></script>
-    <!-- PRETTY PHOTO SCRIPT   -->
-    <script src="assets/plugins/jquery.prettyPhoto.js"></script>    
-    <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+   <?php
+            include('include/script.php');
+        ?>
 
     </body>
 </html>

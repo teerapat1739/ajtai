@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-  <!-- <img src="http://placehold.it/1200x400"/> -->
-<!--[if (gte IE 9)|!(IE)]><!-->
+
 <html lang="en">
 <!--<![endif]-->
     <head>
@@ -21,9 +17,6 @@
             </div>
         </div>
         <!--END HOME SECTION-->
-        
-        <!--START NAV SECTION-->
-        
        <!--START NAV SECTION-->
          <?php
             include('MENU.php');
@@ -42,60 +35,60 @@
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                   
                 </ol>
                 <!-- Wrapper for Slides -->
                 <div class="carousel-inner">
-                    <div class="item active">
-                     <!-- Set the first background image using inline CSS below. -->
-                    <!-- Heading Row -->
-                    <div class="row">
-                         <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/1200x700" alt="">
-                        </div>
-                        <div class="col-md-4">
-                <h1>new1</h1>
-                <p>new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1new1</p>
-                <a class="btn btn-primary btn-lg" href="#">Read More >></a>
-                        </div>
-                        
-                    </div>
-                    <!-- /.row -->
-                    </div>
-                     <div class="item ">
-                     <!-- Set the first background image using inline CSS below. -->
-                    <!-- Heading Row -->
-                    <div class="row">
-                         <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/1200x700" alt="">
-                        </div>
-                        <div class="col-md-4">
-                <h1>new2</h1>
-                <p>new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2new2</p>
-                <a class="btn btn-primary btn-lg" href="#">Read More >></a>
-                        </div>
-                        
-                    </div>
-                    <!-- /.row -->
-                    </div>
-                     <div class="item ">
-                     <!-- Set the first background image using inline CSS below. -->
-                    <!-- Heading Row -->
-                    <div class="row">
-                         <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/1200x700" alt="">
-                        </div>
-                        <div class="col-md-4">
-                <h1>New 3</h1>
-                <p>์New 3New 3New 3New 3New 3New 3New 3New 3
-                            New 3New 3New 3New 3New 3New 3
-                            New 3New 3New 3New 3New 3New 3</p>
-                <a class="btn btn-primary btn-lg" href="#">Read More >></a>
-                        </div>
-                        
-                    </div>
-                    <!-- /.row -->
-                    </div>
-                </div>
+                  
+                    <!-- <div class="item "> -->
+                    <?php
+                      include('phpclass/ManageNews.php');
+                        $obj = new ManageNews;
+                 foreach($obj->ShowTop3News(6,7) as $value){
+                    
+                      echo "<div class='item active'>";
+                     echo "<div class='row'>";
+                     echo "<div class='col-md-8'>";
+                     echo"<img class='img-responsive img-rounded' src='".$value['url']."'  alt='' height='1200px' width='700px'>";
+                     echo "</div>
+                        <div class='col-md-4'>";
+                      echo "<h2>".$value['header']."</h2>";
+                      echo "<p>".$value['content']."</p>";
+                      echo "<a class='btn btn-primary btn-lg' href='showNews.php?id=".$value['id']."'>Read More >> </a>";
+                      echo "</div>                      
+                    </div>";
+                     // <!-- /.row -->
+                    echo "</div>";
+                     }
+                   
+                   ?>
+                   <!-- </div> -->
+                    
+                    <!-- <div class="item "> -->
+                    <?php
+                      
+                        $obj = new ManageNews;
+                 foreach($obj->ShowTop3News(1,3) as $value){
+                    
+                      echo "<div class='item'>";
+                     echo "<div class='row'>";
+                     echo "<div class='col-md-8'>";
+                     echo"<img class='img-responsive img-rounded' src='".$value['url']."'  alt='' height='1200px' width='700px'>";
+                     echo "</div>
+                        <div class='col-md-4'>";
+                      echo "<h2>".$value['header']."</h2>";
+                      echo "<p>".$value['content']."</p>";
+                      echo "<a class='btn btn-primary btn-lg' href='showNews.php?id=".$value['id']."'>Read More >> </a>";
+                      echo "</div>                      
+                    </div>";
+                     // <!-- /.row -->
+                    echo "</div>";
+                     }
+                   
+                   ?>
+                   <!-- </div> -->
+                 </div>
                  <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="icon-prev"></span>
@@ -109,7 +102,7 @@
       
 
         <hr>
-
+        
         <!-- Call to Action Well -->
         <div class="row">
             <div class="col-lg-12">
@@ -121,43 +114,26 @@
         </div>
         <!-- /.row -->
 
-        <!-- Content Row -->
+         <!-- Content Row -->
         <div class="row">
-            <div class="col-md-4">
-                <h2>Heading 1</h2>
-                <p>xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxx</p>
-                <a class="btn btn-default" href="#">More Info</a>
-            </div>
-            <!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <h2>Heading 2</h2>
-                <p>xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxx</p>
-                <a class="btn btn-default" href="#">More Info</a>
-            </div>
-            <!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <h2>Heading 3</h2>
-                <p>xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxxxxxxxxx</p>
-                <a class="btn btn-default" href="#">More Info</a>
-            </div>
+            <?php
+                   
+            foreach($obj->ShowTop3News(4,6) as $value){
+                echo "<div class='col-md-4'>";
+                echo "<h2>".$value['header']."</h2>";
+                echo "<p>".$value['content']."</p>";
+                echo "<a class='btn btn-info' href='showNews.php?id=".$value['id']."'>More Info</a>";
+                echo "</div>";
+            }
+            
+            ?>
+           
             <!-- /.col-md-4 -->
         </div>
         <!-- /.row -->
+        <div>
+            <h1><a class='btn btn-success' href='showAllnew.php'>ข่าวทั้งหมด</a></h1>
+        </div>
         <!-- END NEWS SECTIOLN  -->
         
         </div>
@@ -169,24 +145,11 @@
         </div>
         <!--END FOOTER-->
         
-          <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY  -->
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP CORE SCRIPT   -->
-    <script src="assets/plugins/bootstrap.min.js"></script>  
-     <!-- ISOTOPE SCRIPT   -->
-    <script src="assets/plugins/jquery.isotope.min.js"></script>
-    <!-- PRETTY PHOTO SCRIPT   -->
-    <script src="assets/plugins/jquery.prettyPhoto.js"></script>    
-    <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+        <?php
+            include('include/script.php');
+        ?>
         
-         <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+        
     <!-- Script to Activate the Carousel -->
         
         <script>

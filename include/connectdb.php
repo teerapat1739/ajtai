@@ -1,6 +1,6 @@
 <?php
 
-$conn= mysqli_connect("localhost","root","","member") or die("xxxx");
+$conn= mysqli_connect("localhost","root","","tbl_py") or die("xxxx");
 
 
 ?>
