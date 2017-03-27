@@ -616,16 +616,24 @@
 
 
         <!--START FOOTER-->
-         <div class="col-md-12 footer">
         <?php
             include('include/FOOTER.php');
         ?>
-        </div>
         <!--END FOOTER-->
         
-   <?php
-            include('include/script.php');
-        ?>
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="assets/plugins/bootstrap.min.js"></script>  
+     <!-- ISOTOPE SCRIPT   -->
+    <script src="assets/plugins/jquery.isotope.min.js"></script>
+    <!-- PRETTY PHOTO SCRIPT   -->
+    <script src="assets/plugins/jquery.prettyPhoto.js"></script>    
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/tab.js"></script>
     
     </body>
 </html>

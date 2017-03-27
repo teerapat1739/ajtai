@@ -13,37 +13,19 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                    <?php if(isset($_GET['status'])){
-                    if($_GET['status']=='admin'){
-                        echo "<li><a href='AdminMenu.php?status=admin'>Admin</a></li>";
-                        echo "<li><a href='Home.php?status=admin'>HOME</a></li>";
-                        echo " <li><a href='HISTORY.php?status=admin'>HISTORY</a></li>";
-                        echo " <li class='dropdown'>
+                         <li><a href="Home.php">HOME</a></li>
+                        <li><a href="HISTORY.php">HISTORY</a></li>
+                        <li class="dropdown">
                             <a >COURSE</a>
-                            <div class='dropdown-content'>
-                                <a href='CourseSoftware.php?status=admin'>SOFTWARE</a>
-                                <a href='CourseAuto.php?status=admin'>AUTOMOTIVE</a>
+                            <div class="dropdown-content">
+                                <a href="CourseSoftware.php">SOFTWARE</a>
+                                <a href="CourseAuto.php">AUTOMOTIVE</a>
                             </div>
-                        </li>";
-                        echo "<li><a href='person.php?status=admin'>PERSON</a></li>";
-                        echo "<li><a href='Life.php?status=admin'>LIFE</a></li>";
-                        echo " <li><a href='gallery.php?status=admin'>GALLERY</a></li>";
-                        }
-                     }else{
-                        echo "<li><a href='Home.php'>HOME</a></li>";
-                        echo " <li><a href='HISTORY.php'>HISTORY</a></li>";
-                        echo " <li class='dropdown'>
-                            <a >COURSE</a>
-                            <div class='dropdown-content'>
-                                <a href='CourseSoftware.php'>SOFTWARE</a>
-                                <a href='CourseAuto.php?'>AUTOMOTIVE</a>
-                            </div>
-                        </li>";
-                        echo "<li><a href='person.php'>PERSON</a></li>";
-                        echo "<li><a href='Life.php'>LIFE</a></li>";
-                        echo " <li><a href='gallery.php'>GALLERY</a></li>";
-                     }   
-                    ?>
+                        </li>
+                            
+                        <li><a href="person.html">PERSON</a></li>
+                       <li><a href="Life.php">PERSON</a></li>
+                         <li><a href="gallery.php">GALLERY</a></li>
                     </ul>
                 </div>
             </div>
